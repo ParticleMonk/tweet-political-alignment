@@ -1,0 +1,14 @@
+-Problem Specifications-
+
+500,000 Congressional tweets
+-Retweet Count
+-Favorites Count
+-Hashtags contained
+-Posting Party
+
+Processing Data:
+Normalize Favorites and Retweet count
+Note if there is a URL in tweet
+Note length minus hashtags
+Convert all text to one case
+-Filter out commons words (Library for this) 
