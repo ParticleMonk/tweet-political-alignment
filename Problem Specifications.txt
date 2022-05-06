@@ -15,4 +15,4 @@ Convert all text to one case
 To-Do:
 Break into training, testing and validation sets
 
-Figure out how to test the model 
+Figure out how to test the model

@@ -4,7 +4,13 @@ import csv
 import math
 
 
-dataset = pd.read_csv('congressional_tweet_training_data_v5.csv')
+dataset = pd.read_csv('congressional_tweet_training_data_v7.csv')
+
+n = dataset.shape[1]
+
+print('Number of columns is: ', n)
+#dataset = dataset.drop(range(1, 50000))
+#dataset.to_csv('congressional_tweet_training_data_v7.csv', index=False)
 
 
 '''cond = dataset['party_id'] == "R"
@@ -14,7 +20,7 @@ cond = dataset['party_id'] == "D"
 dataset.loc[cond,'party_id'] = 0
 dataset.to_csv('congressional_tweet_training_data_v3.csv')
 '''
-hashtag_shortlist = pd.read_csv('column_list.csv')
+'''hashtag_shortlist = pd.read_csv('column_list.csv')
 #print(dataset)
 
 hashtags = hashtag_shortlist['hashtag']
@@ -25,7 +31,7 @@ for column in dataset:
         del dataset[column]
 
 dataset.to_csv('congressional_tweet_training_data_v6.csv', index=False)
-
+'''
 '''
 for hashtag in hashtags.values:
     dataset[hashtag] = [0] * 592803
